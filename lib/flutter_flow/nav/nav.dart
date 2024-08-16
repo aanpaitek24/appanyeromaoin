@@ -149,6 +149,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'auth_3_ForgotPassword',
           path: '/auth3ForgotPassword',
           builder: (context, params) => const Auth3ForgotPasswordWidget(),
+        ),
+        FFRoute(
+          name: 'Movies',
+          path: '/movies',
+          builder: (context, params) => const MoviesWidget(),
+        ),
+        FFRoute(
+          name: 'Music',
+          path: '/music',
+          builder: (context, params) => const MusicWidget(),
+        ),
+        FFRoute(
+          name: 'PanyeroTalker',
+          path: '/panyeroTalker',
+          builder: (context, params) => const PanyeroTalkerWidget(),
+        ),
+        FFRoute(
+          name: 'Academy',
+          path: '/academy',
+          builder: (context, params) => const AcademyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

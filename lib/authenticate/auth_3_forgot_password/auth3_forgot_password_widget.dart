@@ -64,8 +64,6 @@ class _Auth3ForgotPasswordWidgetState extends State<Auth3ForgotPasswordWidget>
         ],
       ),
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

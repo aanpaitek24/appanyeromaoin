@@ -65,8 +65,6 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
         ],
       ),
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

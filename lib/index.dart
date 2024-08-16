@@ -15,3 +15,7 @@ export '/authenticate/auth_3_verify_phone/auth3_verify_phone_widget.dart'
     show Auth3VerifyPhoneWidget;
 export '/authenticate/auth_3_forgot_password/auth3_forgot_password_widget.dart'
     show Auth3ForgotPasswordWidget;
+export '/pages/movies/movies_widget.dart' show MoviesWidget;
+export '/music/music_widget.dart' show MusicWidget;
+export '/panyero_talker/panyero_talker_widget.dart' show PanyeroTalkerWidget;
+export '/academy/academy_widget.dart' show AcademyWidget;

@@ -66,8 +66,6 @@ class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>
         ],
       ),
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

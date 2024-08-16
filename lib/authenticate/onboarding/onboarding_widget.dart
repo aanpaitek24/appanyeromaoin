@@ -392,8 +392,6 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
         ],
       ),
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

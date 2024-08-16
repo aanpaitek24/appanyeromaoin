@@ -23,8 +23,6 @@ class _ListUserWidgetState extends State<ListUserWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ListUserModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

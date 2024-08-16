@@ -23,8 +23,6 @@ class _LogopanyeroWidgetState extends State<LogopanyeroWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => LogopanyeroModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

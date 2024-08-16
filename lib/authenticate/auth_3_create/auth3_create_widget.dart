@@ -75,8 +75,6 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
         ],
       ),
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

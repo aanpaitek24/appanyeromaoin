@@ -140,8 +140,8 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                   child: FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
+                    onPressed: () async {
+                      context.pushNamed('PanyeroTalker');
                     },
                     text: 'Help',
                     icon: const Icon(
@@ -576,9 +576,9 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                         MainAxisAlignment
                                                             .center,
                                                     children: [
-                                                      Icon(
-                                                        Icons
-                                                            .account_balance_outlined,
+                                                      FaIcon(
+                                                        FontAwesomeIcons
+                                                            .moneyCheckAlt,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -594,7 +594,7 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Save',
+                                                          'Earnings',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -647,8 +647,7 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                             .center,
                                                     children: [
                                                       Icon(
-                                                        Icons
-                                                            .local_police_outlined,
+                                                        Icons.menu_book_rounded,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -664,63 +663,7 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Invest',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMediumFamily,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .bodyMediumFamily),
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Container(
-                                                  width: 110.0,
-                                                  height: 100.0,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryBackground,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8.0),
-                                                  ),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Icon(
-                                                        Icons.videogame_asset,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        size: 34.0,
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    8.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          'Play',
+                                                          'Academy',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -751,7 +694,7 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                   highlightColor:
                                                       Colors.transparent,
                                                   onTap: () async {
-                                                    context.pushNamed('crypto');
+                                                    context.pushNamed('Music');
                                                   },
                                                   child: Container(
                                                     width: 110.0,
@@ -771,12 +714,13 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                           MainAxisAlignment
                                                               .center,
                                                       children: [
-                                                        FaIcon(
-                                                          FontAwesomeIcons.btc,
+                                                        Icon(
+                                                          Icons
+                                                              .library_music_rounded,
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
-                                                          size: 34.0,
+                                                          size: 30.0,
                                                         ),
                                                         Padding(
                                                           padding:
@@ -787,7 +731,76 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Crypto',
+                                                            'Music',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMediumFamily),
+                                                                ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    context.pushNamed('Movies');
+                                                  },
+                                                  child: Container(
+                                                    width: 110.0,
+                                                    height: 100.0,
+                                                    decoration: BoxDecoration(
+                                                      color: FlutterFlowTheme
+                                                              .of(context)
+                                                          .primaryBackground,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                    ),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Icon(
+                                                          Icons
+                                                              .video_camera_back_outlined,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          size: 30.0,
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      8.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            'Movies',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -1017,6 +1030,7 @@ class _HomeWalletWidgetState extends State<HomeWalletWidget>
                                             decoration: const BoxDecoration(),
                                             child: ListView(
                                               padding: EdgeInsets.zero,
+                                              primary: false,
                                               shrinkWrap: true,
                                               scrollDirection: Axis.vertical,
                                               children: [
