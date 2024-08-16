@@ -9,6 +9,7 @@ import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
@@ -136,7 +137,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'History': const HistoryWidget(),
       'QrCode': const QrCodeWidget(),
       'crypto': const CryptoWidget(),
-      'ListUser': const ListUserWidget(),
+      'Profile': const ProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -188,11 +189,11 @@ class _NavBarPageState extends State<NavBarPage> {
             tooltip: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_sharp,
-              size: 24.0,
+            icon: FaIcon(
+              FontAwesomeIcons.userAlt,
+              size: 18.0,
             ),
-            label: 'Home',
+            label: 'Profile',
             tooltip: '',
           )
         ],

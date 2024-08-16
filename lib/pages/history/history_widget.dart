@@ -50,7 +50,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
               borderWidth: 1.0,
               buttonSize: 60.0,
               icon: Icon(
-                Icons.arrow_back_rounded,
+                Icons.arrow_back_ios,
                 color: FlutterFlowTheme.of(context).secondaryText,
                 size: 30.0,
               ),
@@ -93,6 +93,13 @@ class _HistoryWidgetState extends State<HistoryWidget> {
               }
               List<TransactionsRecord> listViewTransactionsRecordList =
                   snapshot.data!;
+              if (listViewTransactionsRecordList.isEmpty) {
+                return Center(
+                  child: Image.asset(
+                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/panyero-ifbb3n/assets/0nyu6hzvz5pq/search-no-result-information-or-data-not-found-in-the-list-concept-illustration-flat-design-simple-modern-graphic-element-for-empty-state-ui-infographic-icon-vector.jpg',
+                  ),
+                );
+              }
 
               return ListView.builder(
                 padding: EdgeInsets.zero,
@@ -122,7 +129,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
                                 child: Container(
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.92,
-                                  height: 70.0,
+                                  height: 89.0,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,

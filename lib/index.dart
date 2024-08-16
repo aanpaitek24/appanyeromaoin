@@ -2,7 +2,6 @@
 export '/pages/home_wallet/home_wallet_widget.dart' show HomeWalletWidget;
 export '/pages/history/history_widget.dart' show HistoryWidget;
 export '/authenticate/onboarding/onboarding_widget.dart' show OnboardingWidget;
-export '/pages/list_user/list_user_widget.dart' show ListUserWidget;
 export '/pages/crypto/crypto_widget.dart' show CryptoWidget;
 export '/pages/qr_code/qr_code_widget.dart' show QrCodeWidget;
 export '/authenticate/auth_3_create/auth3_create_widget.dart'
@@ -19,3 +18,4 @@ export '/pages/movies/movies_widget.dart' show MoviesWidget;
 export '/music/music_widget.dart' show MusicWidget;
 export '/panyero_talker/panyero_talker_widget.dart' show PanyeroTalkerWidget;
 export '/academy/academy_widget.dart' show AcademyWidget;
+export '/profile/profile_widget.dart' show ProfileWidget;

@@ -100,13 +100,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
-          name: 'ListUser',
-          path: '/listUser',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'ListUser')
-              : const ListUserWidget(),
-        ),
-        FFRoute(
           name: 'crypto',
           path: '/crypto',
           builder: (context, params) => params.isEmpty
@@ -169,6 +162,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Academy',
           path: '/academy',
           builder: (context, params) => const AcademyWidget(),
+        ),
+        FFRoute(
+          name: 'Profile',
+          path: '/profile',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'Profile')
+              : const ProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
