@@ -55,7 +55,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
                 size: 30.0,
               ),
               onPressed: () async {
-                context.pop();
+                context.safePop();
               },
             ),
           ),
@@ -103,6 +103,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
 
               return ListView.builder(
                 padding: EdgeInsets.zero,
+                primary: false,
                 scrollDirection: Axis.vertical,
                 itemCount: listViewTransactionsRecordList.length,
                 itemBuilder: (context, listViewIndex) {
