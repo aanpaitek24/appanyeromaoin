@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -57,20 +56,6 @@ class _QrCodeWidgetState extends State<QrCodeWidget> {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.safePop();
-                        },
-                        child: Icon(
-                          Icons.arrow_back_ios_new,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 34.0,
-                        ),
-                      ),
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
@@ -102,20 +87,10 @@ class _QrCodeWidgetState extends State<QrCodeWidget> {
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 28.0, 0.0),
-                        child: FlutterFlowIconButton(
-                          borderColor: FlutterFlowTheme.of(context).primary,
-                          borderRadius: 4.0,
-                          borderWidth: 1.0,
-                          buttonSize: 40.0,
-                          fillColor: FlutterFlowTheme.of(context).accent1,
-                          icon: Icon(
-                            Icons.qr_code_scanner,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 24.0,
-                          ),
-                          onPressed: () {
-                            print('IconButton pressed ...');
-                          },
+                        child: Icon(
+                          Icons.document_scanner,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 34.0,
                         ),
                       ),
                     ].divide(const SizedBox(width: 44.0)),
@@ -142,7 +117,7 @@ class _QrCodeWidgetState extends State<QrCodeWidget> {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 20.0),
                   child: Material(
                     color: Colors.transparent,
                     elevation: 8.0,
@@ -186,19 +161,23 @@ class _QrCodeWidgetState extends State<QrCodeWidget> {
                             width: 2.0,
                           ),
                         ),
-                        child: AuthUserStreamWidget(
-                          builder: (context) => BarcodeWidget(
-                            data: '+63$currentPhoneNumber',
-                            barcode: Barcode.qrCode(),
-                            width: 280.0,
-                            height: 280.0,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            backgroundColor: Colors.transparent,
-                            errorBuilder: (context, error) => const SizedBox(
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              20.0, 20.0, 20.0, 20.0),
+                          child: AuthUserStreamWidget(
+                            builder: (context) => BarcodeWidget(
+                              data: '+63$currentPhoneNumber',
+                              barcode: Barcode.qrCode(),
                               width: 280.0,
                               height: 280.0,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              backgroundColor: Colors.transparent,
+                              errorBuilder: (context, error) => const SizedBox(
+                                width: 280.0,
+                                height: 280.0,
+                              ),
+                              drawText: false,
                             ),
-                            drawText: false,
                           ),
                         ),
                       ),

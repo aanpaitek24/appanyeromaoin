@@ -520,7 +520,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Image.network(
-                              'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw5fHxjb2ZmZWV8ZW58MHx8fHwxNzA2NjUzOTMwfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                              'https://images.unsplash.com/photo-1655107614517-dc106f8cf1a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMnx8TWFyaW5lJTIwRGVja3xlbnwwfHx8fDE3MjM4MTA1MjF8MA&ixlib=rb-4.0.3&q=80&w=1080',
                               width: double.infinity,
                               height: 500.0,
                               fit: BoxFit.cover,
@@ -608,9 +608,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Image.network(
-                              'https://images.unsplash.com/photo-1485808191679-5f86510681a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxNHx8Y29mZmVlfGVufDB8fHx8MTcwNjY1MzkzMHww&ixlib=rb-4.0.3&q=80&w=1080',
+                              'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxtYXJpdGluZSUyMHNjaG9vbHxlbnwwfHx8fDE3MjM4MTA2NzF8MA&ixlib=rb-4.0.3&q=80&w=1080',
                               width: double.infinity,
-                              height: 705.0,
+                              height: 504.0,
                               fit: BoxFit.cover,
                             ).animateOnPageLoad(
                                 animationsMap['imageOnPageLoadAnimation3']!),
@@ -701,7 +701,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.network(
-                                'https://images.unsplash.com/photo-1522992319-0365e5f11656?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMnx8Y29mZmVlfGVufDB8fHx8MTcwNjY1MzkzMHww&ixlib=rb-4.0.3&q=80&w=1080',
+                                'https://i.pinimg.com/564x/73/92/d7/7392d78768e87e1e2bd9eb1864d39e9b.jpg',
                               ).image,
                             ),
                           ),

@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'list_user_model.dart';
 export 'list_user_model.dart';
 
@@ -59,16 +58,6 @@ class _ListUserWidgetState extends State<ListUserWidget> {
                           FlutterFlowTheme.of(context).headlineSmallFamily),
                     ),
               ),
-              Text(
-                'Invite your friends to join you!',
-                style: FlutterFlowTheme.of(context).labelMedium.override(
-                      fontFamily:
-                          FlutterFlowTheme.of(context).labelMediumFamily,
-                      letterSpacing: 0.0,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).labelMediumFamily),
-                    ),
-              ),
             ],
           ),
           actions: [
@@ -103,20 +92,6 @@ class _ListUserWidgetState extends State<ListUserWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                    child: LinearPercentIndicator(
-                      percent: 1.0,
-                      width: MediaQuery.sizeOf(context).width * 1.0,
-                      lineHeight: 12.0,
-                      animation: true,
-                      animateFromLastPercent: true,
-                      progressColor: FlutterFlowTheme.of(context).secondary,
-                      backgroundColor: const Color(0xFFE0E3E7),
-                      barRadius: const Radius.circular(0.0),
-                      padding: EdgeInsets.zero,
-                    ),
-                  ),
-                  Padding(
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
                     child: Row(
@@ -141,23 +116,6 @@ class _ListUserWidgetState extends State<ListUserWidget> {
                                                 .labelMediumFamily),
                                   ),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 12.0, 0.0, 0.0),
-                          child: Text(
-                            '#',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyMediumFamily,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
-                                ),
                           ),
                         ),
                         Padding(

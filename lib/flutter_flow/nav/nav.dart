@@ -149,6 +149,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'auth_3_ForgotPassword',
           path: '/auth3ForgotPassword',
           builder: (context, params) => const Auth3ForgotPasswordWidget(),
+        ),
+        FFRoute(
+          name: 'Details19TransactionBudget',
+          path: '/details19TransactionBudget',
+          builder: (context, params) => const Details19TransactionBudgetWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
