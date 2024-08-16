@@ -75,6 +75,31 @@ class UsersRecord extends FirestoreRecord {
   int get qrCode => _qrCode ?? 0;
   bool hasQrCode() => _qrCode != null;
 
+  // "gcash_number" field.
+  String? _gcashNumber;
+  String get gcashNumber => _gcashNumber ?? '';
+  bool hasGcashNumber() => _gcashNumber != null;
+
+  // "gcash_name" field.
+  String? _gcashName;
+  String get gcashName => _gcashName ?? '';
+  bool hasGcashName() => _gcashName != null;
+
+  // "account_number" field.
+  String? _accountNumber;
+  String get accountNumber => _accountNumber ?? '';
+  bool hasAccountNumber() => _accountNumber != null;
+
+  // "affiliate_code" field.
+  String? _affiliateCode;
+  String get affiliateCode => _affiliateCode ?? '';
+  bool hasAffiliateCode() => _affiliateCode != null;
+
+  // "sponsor" field.
+  String? _sponsor;
+  String get sponsor => _sponsor ?? '';
+  bool hasSponsor() => _sponsor != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -88,6 +113,11 @@ class UsersRecord extends FirestoreRecord {
     _role = snapshotData['role'] as String?;
     _title = snapshotData['title'] as String?;
     _qrCode = castToType<int>(snapshotData['qrCode']);
+    _gcashNumber = snapshotData['gcash_number'] as String?;
+    _gcashName = snapshotData['gcash_name'] as String?;
+    _accountNumber = snapshotData['account_number'] as String?;
+    _affiliateCode = snapshotData['affiliate_code'] as String?;
+    _sponsor = snapshotData['sponsor'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -136,6 +166,11 @@ Map<String, dynamic> createUsersRecordData({
   String? role,
   String? title,
   int? qrCode,
+  String? gcashNumber,
+  String? gcashName,
+  String? accountNumber,
+  String? affiliateCode,
+  String? sponsor,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -151,6 +186,11 @@ Map<String, dynamic> createUsersRecordData({
       'role': role,
       'title': title,
       'qrCode': qrCode,
+      'gcash_number': gcashNumber,
+      'gcash_name': gcashName,
+      'account_number': accountNumber,
+      'affiliate_code': affiliateCode,
+      'sponsor': sponsor,
     }.withoutNulls,
   );
 
@@ -173,7 +213,12 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.lastActiveTime == e2?.lastActiveTime &&
         e1?.role == e2?.role &&
         e1?.title == e2?.title &&
-        e1?.qrCode == e2?.qrCode;
+        e1?.qrCode == e2?.qrCode &&
+        e1?.gcashNumber == e2?.gcashNumber &&
+        e1?.gcashName == e2?.gcashName &&
+        e1?.accountNumber == e2?.accountNumber &&
+        e1?.affiliateCode == e2?.affiliateCode &&
+        e1?.sponsor == e2?.sponsor;
   }
 
   @override
@@ -189,7 +234,12 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.lastActiveTime,
         e?.role,
         e?.title,
-        e?.qrCode
+        e?.qrCode,
+        e?.gcashNumber,
+        e?.gcashName,
+        e?.accountNumber,
+        e?.affiliateCode,
+        e?.sponsor
       ]);
 
   @override

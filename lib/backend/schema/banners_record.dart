@@ -35,11 +35,23 @@ class BannersRecord extends FirestoreRecord {
   String get description => _description ?? '';
   bool hasDescription() => _description != null;
 
+  // "row1" field.
+  String? _row1;
+  String get row1 => _row1 ?? '';
+  bool hasRow1() => _row1 != null;
+
+  // "row2" field.
+  String? _row2;
+  String get row2 => _row2 ?? '';
+  bool hasRow2() => _row2 != null;
+
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
     _image = snapshotData['image'] as String?;
     _video = snapshotData['video'] as String?;
     _description = snapshotData['description'] as String?;
+    _row1 = snapshotData['row1'] as String?;
+    _row2 = snapshotData['row2'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -81,6 +93,8 @@ Map<String, dynamic> createBannersRecordData({
   String? image,
   String? video,
   String? description,
+  String? row1,
+  String? row2,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -88,6 +102,8 @@ Map<String, dynamic> createBannersRecordData({
       'image': image,
       'video': video,
       'description': description,
+      'row1': row1,
+      'row2': row2,
     }.withoutNulls,
   );
 
@@ -102,12 +118,14 @@ class BannersRecordDocumentEquality implements Equality<BannersRecord> {
     return e1?.name == e2?.name &&
         e1?.image == e2?.image &&
         e1?.video == e2?.video &&
-        e1?.description == e2?.description;
+        e1?.description == e2?.description &&
+        e1?.row1 == e2?.row1 &&
+        e1?.row2 == e2?.row2;
   }
 
   @override
-  int hash(BannersRecord? e) =>
-      const ListEquality().hash([e?.name, e?.image, e?.video, e?.description]);
+  int hash(BannersRecord? e) => const ListEquality()
+      .hash([e?.name, e?.image, e?.video, e?.description, e?.row1, e?.row2]);
 
   @override
   bool isValidKey(Object? o) => o is BannersRecord;

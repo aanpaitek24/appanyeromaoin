@@ -12,6 +12,7 @@ import 'schema/games_record.dart';
 import 'schema/payments_record.dart';
 import 'schema/cryptocurrency_record.dart';
 import 'schema/transactions_record.dart';
+import 'schema/lotterry_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -27,6 +28,7 @@ export 'schema/games_record.dart';
 export 'schema/payments_record.dart';
 export 'schema/cryptocurrency_record.dart';
 export 'schema/transactions_record.dart';
+export 'schema/lotterry_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -282,6 +284,43 @@ Future<List<TransactionsRecord>> queryTransactionsRecordOnce({
     queryCollectionOnce(
       TransactionsRecord.collection,
       TransactionsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query LotterryRecords (as a Stream and as a Future).
+Future<int> queryLotterryRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      LotterryRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<LotterryRecord>> queryLotterryRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      LotterryRecord.collection,
+      LotterryRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<LotterryRecord>> queryLotterryRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      LotterryRecord.collection,
+      LotterryRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

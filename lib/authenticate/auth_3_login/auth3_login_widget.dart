@@ -548,7 +548,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primary,
+                                                                .primaryText,
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:

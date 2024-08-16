@@ -15,5 +15,3 @@ export '/authenticate/auth_3_verify_phone/auth3_verify_phone_widget.dart'
     show Auth3VerifyPhoneWidget;
 export '/authenticate/auth_3_forgot_password/auth3_forgot_password_widget.dart'
     show Auth3ForgotPasswordWidget;
-export '/details19_transaction_budget/details19_transaction_budget_widget.dart'
-    show Details19TransactionBudgetWidget;
