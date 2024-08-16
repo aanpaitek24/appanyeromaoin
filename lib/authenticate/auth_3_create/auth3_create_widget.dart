@@ -148,7 +148,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                             children: [
                               Container(
                                 width: double.infinity,
-                                height: 86.0,
+                                height: 116.0,
                                 decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(16.0),

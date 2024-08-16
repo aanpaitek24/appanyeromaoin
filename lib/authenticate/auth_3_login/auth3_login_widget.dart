@@ -138,7 +138,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                             children: [
                               Container(
                                 width: double.infinity,
-                                height: 140.0,
+                                height: 135.0,
                                 decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(16.0),
@@ -585,115 +585,6 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                         thickness: 1.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                      ),
-
-                                      // You will have to add an action on this rich text to go to your login page.
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 12.0, 0.0, 12.0),
-                                        child: RichText(
-                                          textScaler:
-                                              MediaQuery.of(context).textScaler,
-                                          text: TextSpan(
-                                            children: const [
-                                              TextSpan(
-                                                text: 'Additional options:',
-                                                style: TextStyle(),
-                                              )
-                                            ],
-                                            style: FlutterFlowTheme.of(context)
-                                                .labelLarge
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelLargeFamily,
-                                                  letterSpacing: 0.0,
-                                                  useGoogleFonts: GoogleFonts
-                                                          .asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelLargeFamily),
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(-1.0, -1.0),
-                                        child: FFButtonWidget(
-                                          onPressed: () async {
-                                            context.pushNamed(
-                                              'auth_3_phone',
-                                              extra: <String, dynamic>{
-                                                kTransitionInfoKey:
-                                                    const TransitionInfo(
-                                                  hasTransition: true,
-                                                  transitionType:
-                                                      PageTransitionType.fade,
-                                                  duration:
-                                                      Duration(milliseconds: 0),
-                                                ),
-                                              },
-                                            );
-                                          },
-                                          text: 'Continue with Phone',
-                                          icon: const Icon(
-                                            Icons.phone_sharp,
-                                            size: 15.0,
-                                          ),
-                                          options: FFButtonOptions(
-                                            width: double.infinity,
-                                            height: 44.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    24.0, 0.0, 24.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMediumFamily,
-                                                      letterSpacing: 0.0,
-                                                      useGoogleFonts: GoogleFonts
-                                                              .asMap()
-                                                          .containsKey(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily),
-                                                    ),
-                                            elevation: 0.0,
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(12.0),
-                                            hoverColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .alternate,
-                                            hoverBorderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
-                                            ),
-                                            hoverTextColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryText,
-                                            hoverElevation: 3.0,
-                                          ),
-                                        ),
                                       ),
                                     ],
                                   ),
