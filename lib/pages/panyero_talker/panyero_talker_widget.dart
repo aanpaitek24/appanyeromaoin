@@ -93,6 +93,7 @@ class _PanyeroTalkerWidgetState extends State<PanyeroTalkerWidget> {
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.safePop();
+                            _model.soundPlayer?.stop();
                           },
                           child: Icon(
                             Icons.arrow_back_ios_new,

@@ -247,8 +247,8 @@ class _QrCodeWidgetState extends State<QrCodeWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          context.pushNamed('ManuaTransfer');
                         },
                         text: 'Manual Trasfer',
                         options: FFButtonOptions(

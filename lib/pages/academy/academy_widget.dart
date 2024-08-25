@@ -67,6 +67,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                 highlightColor: Colors.transparent,
                 onTap: () async {
                   context.safePop();
+                  _model.soundPlayer?.stop();
                 },
                 child: Icon(
                   Icons.arrow_back_ios,
