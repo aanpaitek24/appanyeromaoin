@@ -149,9 +149,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const MoviesWidget(),
         ),
         FFRoute(
-          name: 'Music',
-          path: '/music',
-          builder: (context, params) => const MusicWidget(),
+          name: 'Games',
+          path: '/games',
+          builder: (context, params) => const GamesWidget(),
         ),
         FFRoute(
           name: 'PanyeroTalker',
@@ -169,6 +169,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'Profile')
               : const ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'ScanQR',
+          path: '/scanQR',
+          builder: (context, params) => const ScanQRWidget(),
+        ),
+        FFRoute(
+          name: 'ManuaTransfer',
+          path: '/manuaTransfer',
+          builder: (context, params) => const ManuaTransferWidget(),
+        ),
+        FFRoute(
+          name: 'EditProfile',
+          path: '/editProfile',
+          builder: (context, params) => const EditProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

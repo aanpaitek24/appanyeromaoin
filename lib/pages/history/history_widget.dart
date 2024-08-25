@@ -94,10 +94,8 @@ class _HistoryWidgetState extends State<HistoryWidget> {
               List<TransactionsRecord> listViewTransactionsRecordList =
                   snapshot.data!;
               if (listViewTransactionsRecordList.isEmpty) {
-                return Center(
-                  child: Image.asset(
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/panyero-ifbb3n/assets/0nyu6hzvz5pq/search-no-result-information-or-data-not-found-in-the-list-concept-illustration-flat-design-simple-modern-graphic-element-for-empty-state-ui-infographic-icon-vector.jpg',
-                  ),
+                return Image.network(
+                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/panyero-ifbb3n/assets/0nyu6hzvz5pq/search-no-result-information-or-data-not-found-in-the-list-concept-illustration-flat-design-simple-modern-graphic-element-for-empty-state-ui-infographic-icon-vector.jpg',
                 );
               }
 

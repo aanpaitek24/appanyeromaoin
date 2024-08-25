@@ -900,9 +900,12 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                         MediaQuery.of(context).textScaler,
                                     text: TextSpan(
                                       children: [
-                                        const TextSpan(
+                                        TextSpan(
                                           text: 'Already have an account? ',
-                                          style: TextStyle(),
+                                          style: TextStyle(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                          ),
                                         ),
                                         TextSpan(
                                           text: 'Sign In here',
@@ -933,6 +936,8 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .labelLargeFamily,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
                                             letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(

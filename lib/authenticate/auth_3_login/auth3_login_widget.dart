@@ -530,11 +530,11 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                               children: [
                                                 const TextSpan(
                                                   text:
-                                                      'Already have an account? ',
+                                                      'Don\'t  have an account? ',
                                                   style: TextStyle(),
                                                 ),
                                                 TextSpan(
-                                                  text: 'Sign In here',
+                                                  text: 'Sign up here',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium

@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:just_audio/just_audio.dart';
 import 'panyero_talker_model.dart';
 export 'panyero_talker_model.dart';
 
@@ -26,6 +27,15 @@ class _PanyeroTalkerWidgetState extends State<PanyeroTalkerWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await requestPermission(microphonePermission);
+      _model.soundPlayer ??= AudioPlayer();
+      if (_model.soundPlayer!.playing) {
+        await _model.soundPlayer!.stop();
+      }
+      _model.soundPlayer!.setVolume(1.0);
+      _model.soundPlayer!
+          .setUrl(
+              'https://firebasestorage.googleapis.com/v0/b/panyero-ifbb3n.appspot.com/o/panyerostoragecc%2Fpanyero.mp3?alt=media&token=1fff4784-0148-4924-9d1c-6e2112f9e8c8')
+          .then((_) => _model.soundPlayer!.play());
     });
   }
 
@@ -86,8 +96,8 @@ class _PanyeroTalkerWidgetState extends State<PanyeroTalkerWidget> {
                           },
                           child: Icon(
                             Icons.arrow_back_ios_new,
-                            color: FlutterFlowTheme.of(context).tertiary,
-                            size: 44.0,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 28.0,
                           ),
                         ),
                       ],

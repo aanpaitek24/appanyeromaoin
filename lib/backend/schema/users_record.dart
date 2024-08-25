@@ -100,6 +100,21 @@ class UsersRecord extends FirestoreRecord {
   String get sponsor => _sponsor ?? '';
   bool hasSponsor() => _sponsor != null;
 
+  // "address" field.
+  String? _address;
+  String get address => _address ?? '';
+  bool hasAddress() => _address != null;
+
+  // "team" field.
+  String? _team;
+  String get team => _team ?? '';
+  bool hasTeam() => _team != null;
+
+  // "mayaNumber" field.
+  String? _mayaNumber;
+  String get mayaNumber => _mayaNumber ?? '';
+  bool hasMayaNumber() => _mayaNumber != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -118,6 +133,9 @@ class UsersRecord extends FirestoreRecord {
     _accountNumber = snapshotData['account_number'] as String?;
     _affiliateCode = snapshotData['affiliate_code'] as String?;
     _sponsor = snapshotData['sponsor'] as String?;
+    _address = snapshotData['address'] as String?;
+    _team = snapshotData['team'] as String?;
+    _mayaNumber = snapshotData['mayaNumber'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -171,6 +189,9 @@ Map<String, dynamic> createUsersRecordData({
   String? accountNumber,
   String? affiliateCode,
   String? sponsor,
+  String? address,
+  String? team,
+  String? mayaNumber,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -191,6 +212,9 @@ Map<String, dynamic> createUsersRecordData({
       'account_number': accountNumber,
       'affiliate_code': affiliateCode,
       'sponsor': sponsor,
+      'address': address,
+      'team': team,
+      'mayaNumber': mayaNumber,
     }.withoutNulls,
   );
 
@@ -218,7 +242,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.gcashName == e2?.gcashName &&
         e1?.accountNumber == e2?.accountNumber &&
         e1?.affiliateCode == e2?.affiliateCode &&
-        e1?.sponsor == e2?.sponsor;
+        e1?.sponsor == e2?.sponsor &&
+        e1?.address == e2?.address &&
+        e1?.team == e2?.team &&
+        e1?.mayaNumber == e2?.mayaNumber;
   }
 
   @override
@@ -239,7 +266,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.gcashName,
         e?.accountNumber,
         e?.affiliateCode,
-        e?.sponsor
+        e?.sponsor,
+        e?.address,
+        e?.team,
+        e?.mayaNumber
       ]);
 
   @override

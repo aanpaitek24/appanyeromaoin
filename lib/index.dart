@@ -15,8 +15,12 @@ export '/authenticate/auth_3_verify_phone/auth3_verify_phone_widget.dart'
 export '/authenticate/auth_3_forgot_password/auth3_forgot_password_widget.dart'
     show Auth3ForgotPasswordWidget;
 export '/pages/movies/movies_widget.dart' show MoviesWidget;
-export '/pages/music/music_widget.dart' show MusicWidget;
+export '/pages/games/games_widget.dart' show GamesWidget;
 export '/pages/panyero_talker/panyero_talker_widget.dart'
     show PanyeroTalkerWidget;
 export '/pages/academy/academy_widget.dart' show AcademyWidget;
 export '/pages/profile/profile_widget.dart' show ProfileWidget;
+export '/authenticate/scan_q_r/scan_q_r_widget.dart' show ScanQRWidget;
+export '/authenticate/manua_transfer/manua_transfer_widget.dart'
+    show ManuaTransferWidget;
+export '/edit_profile/edit_profile_widget.dart' show EditProfileWidget;
